@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     conf1.vm.hostname = "test"
     conf1.vm.provider "virtualbox" do |v|
       #v.gui = true
-      v.customize ["modifyvm", :id, "--memory", "400"]
+      v.customize ["modifyvm", :id, "--memory", "1024"]
       v.customize ["modifyvm", :id, "--cpus", "1"]
     end
   end
@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     conf2.vm.hostname = "certif"
     conf2.vm.provider "virtualbox" do |v|
       #v.gui = true
-      v.customize ["modifyvm", :id, "--memory", "400"]
+      v.customize ["modifyvm", :id, "--memory", "1024"]
       v.customize ["modifyvm", :id, "--cpus", "1"]
     end
   end
@@ -30,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     conf3.vm.hostname = "prod"
     conf3.vm.provider "virtualbox" do |v|
      #v.gui = true
-      v.customize ["modifyvm", :id, "--memory", "400"]
+      v.customize ["modifyvm", :id, "--memory", "1024"]
       v.customize ["modifyvm", :id, "--cpus", "1"]
     end
   end
