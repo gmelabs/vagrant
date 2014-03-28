@@ -11,8 +11,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "nodo_test" do |conf1|
     conf1.vm.hostname = "test"
     conf1.vm.provider "virtualbox" do |v|
-      #v.gui = true
-      v.customize ["modifyvm", :id, "--memory", "1024"]
+      v.gui = false
+      v.customize ["modifyvm", :id, "--memory", ENV['VM_MEMORY']]
       v.customize ["modifyvm", :id, "--cpus", "1"]
     end
   end
@@ -20,8 +20,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "nodo_certif" do |conf2|
     conf2.vm.hostname = "certif"
     conf2.vm.provider "virtualbox" do |v|
-      #v.gui = true
-      v.customize ["modifyvm", :id, "--memory", "1024"]
+      v.gui = false
+      v.customize ["modifyvm", :id, "--memory", ENV['VM_MEMORY']]
       v.customize ["modifyvm", :id, "--cpus", "1"]
     end
   end
@@ -29,8 +29,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "nodo_prod" do |conf3|
     conf3.vm.hostname = "prod"
     conf3.vm.provider "virtualbox" do |v|
-     #v.gui = true
-      v.customize ["modifyvm", :id, "--memory", "1024"]
+      v.gui = false
+      v.customize ["modifyvm", :id, "--memory", ENV['VM_MEMORY']]
       v.customize ["modifyvm", :id, "--cpus", "1"]
     end
   end
