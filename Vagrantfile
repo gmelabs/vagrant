@@ -10,6 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.define "nodo_test" do |conf1|
     conf1.vm.hostname = "test"
+    conf1.vm.network "private_network", ip: "10.192.104.13"
     conf1.vm.provider "virtualbox" do |v|
       v.gui = false
       v.customize ["modifyvm", :id, "--memory", ENV['VM_MEMORY']]
@@ -19,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.define "nodo_certif" do |conf2|
     conf2.vm.hostname = "certif"
+    conf1.vm.network "private_network", ip: "10.192.104.14"
     conf2.vm.provider "virtualbox" do |v|
       v.gui = false
       v.customize ["modifyvm", :id, "--memory", ENV['VM_MEMORY']]
@@ -28,6 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.define "nodo_prod" do |conf3|
     conf3.vm.hostname = "prod"
+    conf1.vm.network "private_network", ip: "10.192.104.15"
     conf3.vm.provider "virtualbox" do |v|
       v.gui = false
       v.customize ["modifyvm", :id, "--memory", ENV['VM_MEMORY']]
