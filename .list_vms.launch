@@ -3,7 +3,7 @@
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
 <listEntry value="org.eclipse.ui.externaltools.launchGroup"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="C:\Windows\System32\cmd.exe"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="/K vagrantup.bat &amp;&amp; exit"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="list vms"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/vagrant}"/>
 </launchConfiguration>
