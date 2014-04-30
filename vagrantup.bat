@@ -42,7 +42,9 @@ for /f "tokens=2 delims=: " %%a in ("%str%") do (
 	echo WARN -         ========= ^^
 	echo WARN - A SSH Tunnel may be required. Example:
 	echo WARN -  ssh -N %USERNAME%@10.192.104.12 -L 0.0.0.0:8081:127.0.0.1:8081
-	echo NEXUS_URL=%%a:8081> "puppet\modules\base\files\nexus{LOCAL}.properties"
+	echo NEXUS_URL=%%a:8081  >  "puppet\modules\base\files\nexus{LOCAL}.properties"
+	echo NEXUS_USER=admin    >> "puppet\modules\base\files\nexus{LOCAL}.properties"
+	echo NEXUS_PASS=admin123 >> "puppet\modules\base\files\nexus{LOCAL}.properties"
 )
 del .tmp
 goto :EOF
